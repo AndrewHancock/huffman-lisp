@@ -15,7 +15,7 @@ First, define a message to be encoded:
 `(defvar message '(A B A C A B A C A D A B A C A D A E A B A C A E A F))`
 
 Construct a Huffman Tree:  
-`(defvar tree (make-huffman-tree message))`
+`(defvar tree (make-huffman-tree message))`  
 `tree`  
 > (((E F D B C A) 26)
 >  (((E F D B C) 13) (((E F D) 5) (((E) 2)) (((F D) 3) (((F) 1)) (((D) 2))))
