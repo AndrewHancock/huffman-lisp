@@ -1,6 +1,6 @@
 Huffman Coding in Common Lisp
-============================================
-    This program demonstrates Huffman coding in Common Lisp. Messages
+=============================
+	This program demonstrates Huffman coding in Common Lisp. Messages
 are represented as lists of symbols are and encoded as a list of
 literal ones and zeros. 
 It was developed and tested using Carnegie Mellon University Common Lisp.
@@ -12,19 +12,19 @@ functions.
 Here is an example demonstrating tree construction, encoding, and decoding:
 
 First, define a message to be encoded:
-> (defvar message '(A B A C A B A C A D A B A C A D A E A B A C A E A F))
+`(defvar message '(A B A C A B A C A D A B A C A D A E A B A C A E A F))`
 
 Construct a Huffman Tree:
-> (defvar tree (make-huffman-tree message))
-> tree
+`(defvar tree (make-huffman-tree message))`
+`tree`
 > (((E F D B C A) 26)
 >  (((E F D B C) 13) (((E F D) 5) (((E) 2)) (((F D) 3) (((F) 1)) (((D) 2))))
 >   (((B C) 8) (((B) 4)) (((C) 4))))
 >  (((A) 13)))
 
 Encode the message:
-> (defvar encoded-message (encode message tree))
-> encoded-message
+`(defvar encoded-message (encode message tree))`
+`encoded-message`
 > (1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 1
 > 1 0 0 0 1 0 1 0 1 0 1 1 1 0 0 0 1 0 0 1 0)
 
