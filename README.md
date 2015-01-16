@@ -16,14 +16,14 @@ First, define a message to be encoded:
 
 Construct a Huffman Tree:  
 `(defvar tree (make-huffman-tree message))`
-`tree`
+`tree`  
 > (((E F D B C A) 26)
 >  (((E F D B C) 13) (((E F D) 5) (((E) 2)) (((F D) 3) (((F) 1)) (((D) 2))))
 >   (((B C) 8) (((B) 4)) (((C) 4))))
 >  (((A) 13)))
 
 Encode the message:  
-`(defvar encoded-message (encode message tree))`
+`(defvar encoded-message (encode message tree))`  
 `encoded-message`
 > (1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 1
 > 1 0 0 0 1 0 1 0 1 0 1 1 1 0 0 0 1 0 0 1 0)
