@@ -1,6 +1,6 @@
 Huffman Coding in Common Lisp
 =============================
-	This program demonstrates Huffman coding in Common Lisp. Messages
+This program demonstrates Huffman coding in Common Lisp. Messages
 are represented as lists of symbols are and encoded as a list of
 literal ones and zeros. 
 It was developed and tested using Carnegie Mellon University Common Lisp.
